@@ -13,7 +13,7 @@ movie(00003, 'Home Alone 11').
 movie(00004, 'Star Wars part 1337').
 movie(00005, 'Madahaskar 12').
 movie(00006, 'Tom and Jerry part 34').
-%...
+
 
 %movie_to_genre
 %(код_кінострічки, жанр)
@@ -40,65 +40,109 @@ movie_to_genre(00006, kids).
 
 %movie_session
 %(код_кінострічки, дата_початку, час, ціна_квитку)
+movie_session(00001, 01102020, 2110, 95).
 movie_session(00001, 01102020, 1900, 100).
 %...
+movie_session(00001, 02102020, 1500, 90).
 movie_session(00001, 02102020, 1830, 100).
 %...
-movie_session(00001, 03102020, 1910, 100).
+movie_session(00001, 03102020, 1230, 100).
+movie_session(00001, 03102020, 1830, 120).
+movie_session(00001, 03102020, 2000, 130).
 %...
 movie_session(00001, 04102020, 1600, 110).
+movie_session(00001, 04102020, 1230, 100).
 %...
 movie_session(00001, 05102020, 1735, 120).
+movie_session(00001, 05102020, 2140, 120).
+movie_session(00001, 05102020, 1545, 120).
 %...
 movie_session(00002, 01102020, 1930, 120).
+movie_session(00002, 01102020, 2115, 130).
 %...
 movie_session(00002, 02102020, 2030, 120).
+movie_session(00002, 02102020, 2240, 110).
+movie_session(00002, 02102020, 1700, 120).
 %...
 movie_session(00002, 03102020, 2110, 120).
+movie_session(00002, 03102020, 2320, 110).
 %...
 movie_session(00002, 04102020, 1650, 110).
+movie_session(00002, 04102020, 1830, 120).
 %...
 movie_session(00002, 05102020, 1700, 130).
+movie_session(00002, 05102020, 2000, 140).
+movie_session(00002, 05102020, 1530, 130).
 %...
 movie_session(00003, 01102020, 1620, 115).
+movie_session(00003, 01102020, 1835, 120).
 %...
 movie_session(00003, 02102020, 2030, 125).
+movie_session(00003, 02102020, 1540, 110).
 %...
 movie_session(00003, 03102020, 2110, 125).
+movie_session(00003, 03102020, 1340, 115).
 %...
 movie_session(00003, 04102020, 1610, 100).
+movie_session(00003, 04102020, 1220, 100).
 %...
 movie_session(00003, 05102020, 1850, 132).
+movie_session(00003, 05102020, 1640, 125).
+movie_session(00003, 05102020, 1420, 120).
 %...
+movie_session(00004, 01102020, 1250, 100).
+movie_session(00004, 01102020, 1545, 100).
 movie_session(00004, 01102020, 1950, 110).
 %...
-movie_session(00004, 02102020, 2100, 105).
+movie_session(00004, 02102020, 1725, 105).
+movie_session(00004, 02102020, 2150, 110).
 %...
 movie_session(00004, 03102020, 2210, 110).
+movie_session(00004, 03102020, 1845, 115).
 %...
 movie_session(00004, 04102020, 1600, 110).
+movie_session(00004, 04102020, 1900, 115).
 %...
 movie_session(00004, 05102020, 1745, 115).
+movie_session(00004, 05102020, 2110, 110).
+movie_session(00004, 05102020, 1520, 115).
 %...
 movie_session(00005, 01102020, 1910, 120).
+movie_session(00005, 01102020, 1245, 110).
+movie_session(00005, 01102020, 1630, 115).
 %...
 movie_session(00005, 02102020, 2035, 120).
+movie_session(00005, 02102020, 1145, 110).
+movie_session(00005, 02102020, 1635, 115).
 %...
 movie_session(00005, 03102020, 2010, 120).
+movie_session(00005, 01102020, 1950, 110).
+movie_session(00005, 01102020, 1950, 110).
 %...
 movie_session(00005, 04102020, 1850, 110).
+movie_session(00005, 04102020, 1645, 100).
 %...
 movie_session(00005, 05102020, 1910, 130).
+movie_session(00005, 05102020, 1420, 130).
+movie_session(00005, 05102020, 1700, 120).
 %...
 movie_session(00006, 01102020, 1940, 120).
+movie_session(00006, 01102020, 1625, 110).
 %...
 movie_session(00006, 02102020, 2130, 125).
+movie_session(00006, 02102020, 1720, 125).
+movie_session(00006, 02102020, 1250, 120).
 %...
 movie_session(00006, 03102020, 2210, 125).
+movie_session(00006, 03102020, 1645, 120).
 %...
 movie_session(00006, 04102020, 1950, 110).
+movie_session(00006, 04102020, 1750, 115).
+movie_session(00006, 04102020, 2110, 115).
 %...
 movie_session(00006, 05102020, 1830, 105).
+movie_session(00006, 05102020, 1450, 110).
+movie_session(00006, 05102020, 1625, 110).
 %...
 
 %customer
@@ -141,7 +185,17 @@ customer_is_free_when(006, 03102020, 1750, 2200).
 %(код_відвідувача,код_фільму,оцінка)
 watched_film(001, 00006, 5).
 watched_film(001, 00002, 2).
-%...
+watched_film(002, 00003, 4).
+watched_film(002, 00004, 3).
+watched_film(002, 00005, 2).
+watched_film(003, 00002, 2).
+watched_film(003, 00006, 4).
+watched_film(004, 00002, 1).
+watched_film(004, 00004, 2).
+watched_film(004, 00006, 4).
+watched_film(005, 00003, 2).
+watched_film(005, 00004, 5).
+
 
 
 %-----------------------------------------------------------------------------
@@ -152,10 +206,14 @@ watched_film(001, 00002, 2).
 recommended_movies(CODE_C, NAME_C, SURNAME, CODE_F, NAME_F) :- watched_film(CODE_C, CODE_F1, MARK), MARK >= 3, movie_to_genre(CODE_F1, GENRE), movie_to_genre(CODE_F, GENRE), CODE_F \= CODE_F1, movie(CODE_F, NAME_F), customer(CODE_C, NAME_C, SURNAME, _).
 
 %takes all recommendations without duplicates
-recommended_movies_res(CODE_C, RES):- findall(NAME_F, recommended_movies(CODE_C,_,_,_,NAME_F), SET), set(SET, RES), !.
+recommended_movies_res(CODE_C, RES):- findall(res_movies(CODE_F,NAME_F), recommended_movies(CODE_C,_,_,CODE_F,NAME_F), SET), set(SET, RES), !.
 
 
+%====2=====
+%рекомендовані сеанси показу
+recommended_sessions(CODE_C, CODE_F, NAME_F, DATE_S, TIME_S, PRICE_S):- recommended_movies(CODE_C, NAME_C, SURNAME, CODE_F, NAME_F), movie_session(CODE_F, DATE_S, TIME_S, PRICE_S), customer_is_free_when(CODE_C, DATE_S, TIME_C_FROM, TIME_C_TO), customer(CODE_C, NAME_C, SURNAME, PRICE_C), TIME_S =< TIME_C_TO, TIME_S >= TIME_C_FROM, PRICE_C >= PRICE_S.
 
+recommended_sessions_res(CODE_C, RES):- findall(res_session(CODE_F, DATE_S, TIME_S, PRICE_S, NAME_F), recommended_sessions(CODE_C,CODE_F,NAME_F,DATE_S,TIME_S,PRICE_S ), SET), set(SET, RES), !.
 
 %--------------------removing---duplicates-------------
 mymember(X,[X|_]).
@@ -173,3 +231,19 @@ set([H|T],Out) :-
 
 
 %=============================================================================== 
+write_customer(CODE_C):-write('Customer code: '), write(CODE_C),customer(CODE_C,NAME_C,SURNAME,PRICE_C),
+write('\nName: '),write(NAME_C),write('\nSurname: '),write(SURNAME),write('\nAvailable money for ticket: '),write(PRICE_C),nl.
+
+:- initialization(main_first_part).
+main_first_part :- write('\nRecommended movies = = = = =\n'),
+	write_customer(001),
+    recommended_movies_res(001, RES),member(res_movies(_,_),RES), forall(member(res_movies(CODE_F,NAME_F),RES),
+    (write('\nMovie code: '),write(CODE_F),write('\nMovie name: '),write(NAME_F), nl)).
+
+
+:- initialization(main_second_part).
+main_second_part :- write('\nRecommended sessions = = = = =\n'),
+	write_customer(001),
+    recommended_sessions_res(001, RES),member(res_session(_,_,_,_,_),RES), forall(member(res_session(CODE_F, DATE_S, TIME_S, PRICE_S, NAME_F),RES),
+    (write('\nMovie code: '),write(CODE_F),write('\nMovie name: '),write(NAME_F),
+    write('\nSession date: '),write(DATE_S),write('\nSession start time: '),write(TIME_S),write('\nTicket cost: '),write(PRICE_S), nl)).
